@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>{{ site.village_site }}</h2>
+
+<table class="table table-bordered">
+    <tr><th>BA</th><td>{{ site.ba }}</td></tr>
+    <tr><th>OA</th><td>{{ site.oa }}</td></tr>
+    <tr><th>District</th><td>{{ site.district }}</td></tr>
+    <tr><th>Village Code</th><td>{{ site.village_code }}</td></tr>
+    <tr><th>Site ID</th><td>{{ site.site_id }}</td></tr>
+    <tr><th>AT-3 Date</th><td>{{ site.at3_date }}</td></tr>
+    <tr><th>LOT</th><td>{{ site.lot }}</td></tr>
+    <tr><th>Site Developed</th><td>{{ site.site_dev }}</td></tr>
+</table>
+
+<a href="{% url 'site_edit' site.pk %}" class="btn btn-warning">Edit</a>
+<a href="{% url 'site_delete' site.pk %}" class="btn btn-danger">Delete</a>
+<a href="{% url 'site_list' %}" class="btn btn-secondary">Back</a>
+
+{% endblock %}
