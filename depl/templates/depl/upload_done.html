@@ -1,0 +1,11 @@
+<h2>Upload Complete</h2>
+<p>{{ count }} rows uploaded.</p>
+
+{% if errors %}
+<h3>Errors:</h3>
+<ul>
+  {% for e in errors %}
+    <li>{{ e }}</li>
+  {% endfor %}
+</ul>
+{% endif %}
